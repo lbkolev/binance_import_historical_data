@@ -22,7 +22,7 @@ Check out https://www.postgresql.org/docs/current/libpq-pgpass.html for how to c
 function dbconn() {
     cmd=$1
 #    psql "postgresql://$dbuser:$dbpass@$dbhost:$dbport/$dbname?options=--search_path%3dpublic" -Atc "$cmd" 2>&1 | tee $log_file
-    psql "postgresql://$dbuser:$dbpass@$dbhost:$dbport/$dbname?options=--search_path%3dpublic" -Atc "$cmd"
+    psql "postgresql://$dbuser:$dbpass@$dbhost:$dbport/$dbname" -Atc "$cmd"
 }
 
 function init_pair() {
