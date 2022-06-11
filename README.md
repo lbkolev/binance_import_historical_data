@@ -5,11 +5,11 @@ Details about the offered data can be found [here](https://github.com/binance/bi
 ⚠️ ⚠️  Supports only [spot](https://data.binance.vision/?prefix=data/spot/monthly/). ⚠️ ⚠️
 
 
-1)[Installation](#Installation)
-2)[Usage](#Usage)
-3)[Examples](#Examples)
-4)[Database schema architecture](#DBExplained)
-5)[Troubleshooting](#Troubleshooting)
+1)[Installation](#Installation)  
+2)[Usage](#Usage)  
+3)[Examples](#Examples)  
+4)[Database schema architecture](#DBExplained)  
+5)[Troubleshooting](#Troubleshooting)  
 
 
 ## Installation
@@ -41,12 +41,12 @@ $ docker run -d --name 'binance_instance1' -p 5432:5432 -e POSTGRES_PASSWORD=<pa
 ```
 
 The postgresql instance we just ran has built-in database and user named *binance*.
-The following details should all be known by now:
-*Hostname*  - Most likely localhost
-*Port*      - The one we ran the instance with, in this case 5432
-*Database*  - Defaults to binance
-*User*      - Defaults to binance
-*Password*  - The one you just setup with POSTGRES_PASSWORD=
+The following details should all be known by now:  
+*Hostname*  - Most likely localhost  
+*Port*      - The one we ran the instance with, in this case 5432  
+*Database*  - Defaults to binance  
+*User*      - Defaults to binance  
+*Password*  - The one you just setup with POSTGRES_PASSWORD=  
 
 
 Populate the first row of ~/.pgpass with the hostname,port,database,user and password of the running instance, as this is what the script uses to connect to the database.
