@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data
+  namespace: testing
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: data
+  template:
+    metadata:
+      labels:
+        app: data
+    spec:
+      containers:
+      - name: data-container
+        image: lbkolev/binance_import_historical_data
+        env:
+        - name: POSTGRES_PASSWORD
+          value: {{ .Values.db_pw }}
